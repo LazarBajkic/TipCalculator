@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Tip-calculator.css">
+        <link rel="icon" href="icon.png" type="icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tip calculator</title>
+    </head>
+
+    <body>
+        <div class="contentDiv js-contentDiv">
+         
+            <div class="inputDiv">
+
+                <p class="descriptiveText">Enter tip %</p>
+                <input type="number" class="tipPercentInput" id="tipPercentInput">
+                <p class="descriptiveText">Bill</p>
+                <input type="number" class="enterAmount" id="enterAmount">
+                <p class="descriptiveText">Number of people paying</p>
+                <input type="number" class="enterAmount" id="peoplePaying">
+                
+                <button class="calculateAmount" id="calculateAmount">Calculate</button>
+                
+                <button class="resetBtn" id="resetBtn">Reset</button>
+
+            </div>
+
+        <div class="resultDiv">
+            <p class="amountEntered" id="amountEntered"></p>
+            <p class="tipPercentAmount" id="tipPercentAmount"></p>
+            <p class="tipAmount" id="tipAmount"></p>
+            <button class="themeChangeBtn" id="themeChangeBtn">Change theme</button>
+        </div>
+
+        </div>
+
+        <div class="errorDiv">
+            <p id="errorMessage"></p>
+        </div>
+        
+        <script src="Tip-calculator.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,151 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: color 0.3s linear;
+  -webkit-transition: color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: cadetblue;
+  background-color: whitesmoke;
+}
+
+.contentDiv{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border: solid cadetblue 3px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.3s linear;
+    -webkit-transition: color 0.3s;
+    -webkit-transition: background-color 0.3s;
+}
+
+input{
+    color: cadetblue;
+}
+
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 49px 20px 48px 20px;
+}
+
+.resultDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 40px 20px;
+}
+
+.errorDiv{
+    position: absolute;
+    top: 80%;
+    letter-spacing: 2px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+.tipPercentInput,
+.enterAmount{
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 10px 15px 10px;
+    border-radius: 15px;
+    border: solid 3px cadetblue;
+}
+
+.amountEntered,
+.tipPercentAmount,
+.tipAmount{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(6, 89, 89);
+}
+
+.descriptiveText{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.calculateAmount:hover{ 
+    background-color: cadetblue;
+    color: whitesmoke;
+}
+
+.calculateAmount{
+    margin-top: 50px;
+    color: cadetblue;
+}
+
+.resetBtn:hover{
+    background-color: cadetblue;
+    color: whitesmoke;
+}
+
+.resetBtn{
+    color: cadetblue;
+    margin-top: 10px;
+}
+
+.themeChangeBtn{
+    margin-top: 38px;
+    color: cadetblue;
+}
+
+.themeChangeBtn:hover{
+    background-color: cadetblue;
+    color: whitesmoke;
+}
+
+.contentDiv button{
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: solid cadetblue 3px;
+    letter-spacing: 4px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:active,input:focus {
+    border: solid cadetblue 3px;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgb(86, 115, 116);
+}
+
+.darkTheme button,
+.darkTheme .contentDiv,
+.darkTheme input{
+    color: rgb(213, 213, 213);
+    background-color: rgb(36, 36, 36);
+    border: solid rgb(213, 213, 213) 3px;
+}
+
+.darkTheme{
+    color: rgb(213, 213, 213);
+    background-color: rgb(36, 36, 36);
+}
+
+.darkTheme p{
+    color: rgb(213, 213, 213);
+}
+
+.darkTheme button:hover{
+    color: rgb(36, 36, 36);
+    background-color: rgb(213, 213, 213);
+    border: solid rgb(36, 36, 36) 3px;
+}
