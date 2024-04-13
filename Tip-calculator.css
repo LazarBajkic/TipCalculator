@@ -63,7 +63,7 @@ input{
 
 .amountEntered,
 .tipPercentAmount,
-.tipAmount{
+.tipAmount,.individualTipAmount{
     font-size: 30px;
     font-weight: bold;
     color: rgb(6, 89, 89);

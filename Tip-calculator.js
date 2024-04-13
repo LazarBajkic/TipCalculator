@@ -9,11 +9,13 @@ const changeThemeElem = document.getElementById('themeChangeBtn')
 const contentDivElem = document.querySelector('.js-contentDiv')
 const errorMessageElem = document.getElementById('errorMessage')
 const peoplePayingElem = document.getElementById('peoplePaying')
+const individualTipAmount = document.getElementById('individualTipAmount')
 
 
 tipAmountElem.innerHTML=`Total for each person: $`
 tipPercentAmountElem.innerHTML=`You want to tip:`
 amountEnteredElem.innerHTML=`Amount entered: $`
+individualTipAmount.innerHTML=`Individual tip: $`
 
 resetBtnElem.addEventListener('click',() => {
     tipAmountElem.innerHTML=`Total for each person: $`
@@ -37,18 +39,28 @@ calculateAmountElem.addEventListener('click',() => {
         errorMessageElem.innerHTML='All fields must be filled out using numbers higher than 0'
     }else{
          
-    tipAmountElem.innerHTML=`Total for each person: $${calculateTipAmount(amountEntered,tipPercentAmount,peoplePaying)}`;
+    tipAmountElem.innerHTML=`Total for each person: $${calculateTipAmount(amountEntered,tipPercentAmount,peoplePaying)}`
     tipPercentAmountElem.innerHTML=`You want to tip: ${tipPercentAmount}%`
     amountEnteredElem.innerHTML=`Amount entered: $${amountEntered}`
-    errorMessageElem.innerHTML='';
+    individualTipAmount.innerHTML=`Individual tip: $${(calculateIndividualTip(amountEntered,tipPercentAmount,peoplePaying)).toFixed(2)}`
+    errorMessageElem.innerHTML=''
     }
 
 })
 
 function calculateTotalBill(amountEntered,tipPercentAmount){
-    var tipAmount = amountEntered*(tipPercentAmount/100)
-    var totalBill = tipAmount+amountEntered
+    var totalTip=calculateTotalTip(amountEntered,tipPercentAmount)
+    var totalBill = totalTip+amountEntered
     return totalBill
+}
+
+function calculateTotalTip(amountEntered,tipPercentAmount){
+    return amountEntered * (tipPercentAmount / 100);
+}
+
+function calculateIndividualTip(amountEntered,tipPercentAmount,peoplePaying){
+    var totalTip = calculateTotalTip(amountEntered,tipPercentAmount)
+    return totalTip/peoplePaying
 }
 
 function calculateTipAmount(amountEntered,tipPercentAmount,peoplePaying){
